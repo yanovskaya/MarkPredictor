@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C42D95692097A29600772D70 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D95682097A29600772D70 /* CustomSlider.swift */; };
 		C42D956E2097AABE00772D70 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D956D2097AABE00772D70 /* Colors.swift */; };
+		C42D95782097D28800772D70 /* MarkModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C42D95772097D28800772D70 /* MarkModel.mlmodel */; };
 		C44ED8092093D6B900B8A642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44ED8082093D6B900B8A642 /* AppDelegate.swift */; };
 		C44ED80B2093D6B900B8A642 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44ED80A2093D6B900B8A642 /* ViewController.swift */; };
 		C44ED80E2093D6B900B8A642 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C44ED80C2093D6B900B8A642 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		9A86B541CC11B4CBBD666EC8 /* Pods-MarkPredictor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarkPredictor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarkPredictor/Pods-MarkPredictor.debug.xcconfig"; sourceTree = "<group>"; };
 		C42D95682097A29600772D70 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		C42D956D2097AABE00772D70 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		C42D95772097D28800772D70 /* MarkModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MarkModel.mlmodel; sourceTree = "<group>"; };
 		C44ED8052093D6B900B8A642 /* Mark NN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mark NN.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44ED8082093D6B900B8A642 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C44ED80A2093D6B900B8A642 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				C44ED80C2093D6B900B8A642 /* Main.storyboard */,
 				C44ED8112093D6BD00B8A642 /* LaunchScreen.storyboard */,
+				C42D95772097D28800772D70 /* MarkModel.mlmodel */,
 				C44ED80F2093D6BD00B8A642 /* Assets.xcassets */,
 				C44ED8142093D6BD00B8A642 /* Info.plist */,
 				C42D956D2097AABE00772D70 /* Colors.swift */,
@@ -242,6 +245,7 @@
 				C44ED80B2093D6B900B8A642 /* ViewController.swift in Sources */,
 				C42D95692097A29600772D70 /* CustomSlider.swift in Sources */,
 				C44ED8092093D6B900B8A642 /* AppDelegate.swift in Sources */,
+				C42D95782097D28800772D70 /* MarkModel.mlmodel in Sources */,
 				C42D956E2097AABE00772D70 /* Colors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,7 +6,6 @@
 //  Copyright © 2018 Elena Yanovskaya. All rights reserved.
 //
 
-import fluid_slider
 import UIKit
 
 final class ViewController: UIViewController {
