@@ -13,7 +13,6 @@ opt_in_rules:
 - single_test_class # Test files should contain a single QuickSpec or XCTestCase class.
 - sorted_imports # Imports should be sorted.
 - switch_case_on_newline # Cases inside a switch should always be on a newline
-- object_literal # Prefer object literals over image and color inits.
 - overridden_super_call
 - unused_optional_binding
 - colon
