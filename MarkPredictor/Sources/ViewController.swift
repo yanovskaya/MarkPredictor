@@ -15,7 +15,7 @@ final class ViewController: UIViewController {
     
     private enum Constants {
         static let title = "Оценка за экзамен"
-        static let visitLabel = "Процент посещений занятий"
+        static let visitLabel = "Процент посещенных занятий"
         static let testLabel = "Оценка за контрольную работу"
         static let homeworkLabel = "Оценка за домашнюю работу"
     }
@@ -26,9 +26,9 @@ final class ViewController: UIViewController {
     @IBOutlet private var homeworkLabel: UILabel!
     @IBOutlet private var testLabel: UILabel!
     
-    @IBOutlet private var visitSlider: Slider!
-    @IBOutlet private var homeworkSlider: Slider!
-    @IBOutlet private var testSlider: Slider!
+    @IBOutlet private var visitSlider: CustomSlider!
+    @IBOutlet private var homeworkSlider: CustomSlider!
+    @IBOutlet private var testSlider: CustomSlider!
     
     @IBOutlet private var examLabel: UILabel!
     
@@ -70,7 +70,6 @@ final class ViewController: UIViewController {
     }
     
     private func configureVisitSlider() {
-        visitSlider.backgroundColor = .clear
         let labelTextAttributes: [NSAttributedStringKey: Any] = [.font: UIFont.systemFont(ofSize: 12, weight: .bold), .foregroundColor: UIColor.white]
         visitSlider.attributedTextForFraction = { fraction in
             let formatter = NumberFormatter()
@@ -81,22 +80,13 @@ final class ViewController: UIViewController {
         }
         visitSlider.setMinimumLabelAttributedText(NSAttributedString(string: "0%", attributes: labelTextAttributes))
         visitSlider.setMaximumLabelAttributedText(NSAttributedString(string: "100%", attributes: labelTextAttributes))
-        visitSlider.fraction = 0.5
-        visitSlider.shadowOffset = CGSize(width: 0, height: 3)
-        visitSlider.shadowBlur = 5
-        visitSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
-        visitSlider.contentViewColor = UIColor.purple
+        visitSlider.initialConfigure()
+        visitSlider.contentViewColor = PaletteColors.blue
         visitSlider.valueViewColor = .white
-        visitSlider.didBeginTracking = { [weak self] _ in
-            self!.setLabelHidden(true, label: self!.visitLabel, animated: true)
-        }
-        visitSlider.didEndTracking = { [weak self] _ in
-            self!.setLabelHidden(false, label: self!.visitLabel, animated: true)
-        }
+        visitSlider.observeTracking(label: visitLabel)
     }
     
     private func configureHomeworkSlider() {
-        homeworkSlider.backgroundColor = .clear
         let labelTextAttributes: [NSAttributedStringKey: Any] = [.font: UIFont.systemFont(ofSize: 12, weight: .bold), .foregroundColor: UIColor.white]
         homeworkSlider.attributedTextForFraction = { fraction in
             let formatter = NumberFormatter()
@@ -107,22 +97,13 @@ final class ViewController: UIViewController {
         }
         homeworkSlider.setMinimumLabelAttributedText(NSAttributedString(string: "0", attributes: labelTextAttributes))
         homeworkSlider.setMaximumLabelAttributedText(NSAttributedString(string: "10", attributes: labelTextAttributes))
-        homeworkSlider.fraction = 0.5
-        homeworkSlider.shadowOffset = CGSize(width: 0, height: 3)
-        homeworkSlider.shadowBlur = 5
-        homeworkSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
-        homeworkSlider.contentViewColor = UIColor.green
+        homeworkSlider.initialConfigure()
+        homeworkSlider.contentViewColor = PaletteColors.green
         homeworkSlider.valueViewColor = .white
-        homeworkSlider.didBeginTracking = { [weak self] _ in
-            self!.setLabelHidden(true, label: self!.homeworkLabel, animated: true)
-        }
-        homeworkSlider.didEndTracking = { [weak self] _ in
-            self!.setLabelHidden(false, label: self!.homeworkLabel, animated: true)
-        }
+        homeworkSlider.observeTracking(label: homeworkLabel)
     }
     
     private func configureTestSlider() {
-        testSlider.backgroundColor = .clear
         let labelTextAttributes: [NSAttributedStringKey: Any] = [.font: UIFont.systemFont(ofSize: 12, weight: .bold), .foregroundColor: UIColor.white]
         testSlider.attributedTextForFraction = { fraction in
             let formatter = NumberFormatter()
@@ -133,29 +114,10 @@ final class ViewController: UIViewController {
         }
         testSlider.setMinimumLabelAttributedText(NSAttributedString(string: "0", attributes: labelTextAttributes))
         testSlider.setMaximumLabelAttributedText(NSAttributedString(string: "10", attributes: labelTextAttributes))
-        testSlider.fraction = 0.5
-        testSlider.shadowOffset = CGSize(width: 0, height: 3)
-        testSlider.shadowBlur = 5
-        testSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
-        testSlider.contentViewColor = UIColor.blue
+        testSlider.initialConfigure()
+        testSlider.contentViewColor = PaletteColors.teal
         testSlider.valueViewColor = .white
-        testSlider.didBeginTracking = { [weak self] _ in
-            self!.setLabelHidden(true, label: self!.testLabel, animated: true)
-        }
-        testSlider.didEndTracking = { [weak self] _ in
-            self!.setLabelHidden(false, label: self!.testLabel, animated: true)
-        }
-    }
-    
-    private func setLabelHidden(_ hidden: Bool, label: UILabel, animated: Bool) {
-        let animations = {
-            label.alpha = hidden ? 0 : 1
-        }
-        if animated {
-            UIView.animate(withDuration: 0.11, animations: animations)
-        } else {
-            animations()
-        }
+        testSlider.observeTracking(label: testLabel)
     }
     
 }
