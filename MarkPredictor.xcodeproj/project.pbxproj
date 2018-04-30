@@ -78,22 +78,14 @@
 		C44ED8072093D6B900B8A642 /* MarkPredictor */ = {
 			isa = PBXGroup;
 			children = (
-				C44ED80C2093D6B900B8A642 /* Main.storyboard */,
-				C44ED80A2093D6B900B8A642 /* ViewController.swift */,
 				C44ED8082093D6B900B8A642 /* AppDelegate.swift */,
-				C44ED81B2093DB4E00B8A642 /* Resources */,
-			);
-			path = MarkPredictor;
-			sourceTree = "<group>";
-		};
-		C44ED81B2093DB4E00B8A642 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
+				C44ED80A2093D6B900B8A642 /* ViewController.swift */,
+				C44ED80C2093D6B900B8A642 /* Main.storyboard */,
 				C44ED80F2093D6BD00B8A642 /* Assets.xcassets */,
 				C44ED8112093D6BD00B8A642 /* LaunchScreen.storyboard */,
 				C44ED8142093D6BD00B8A642 /* Info.plist */,
 			);
-			path = Resources;
+			path = MarkPredictor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
