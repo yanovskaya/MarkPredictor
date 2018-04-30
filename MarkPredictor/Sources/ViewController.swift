@@ -31,6 +31,10 @@ final class ViewController: UIViewController {
     
     @IBOutlet private var examLabel: UILabel!
     
+    // MARK: - Private Properties
+    
+    private let modelWrapper = MarkModelWrapper()
+    
     // MARK: - ViewController lifecycle
     
     override func viewDidLoad() {
@@ -65,7 +69,7 @@ final class ViewController: UIViewController {
         
         examLabel.textColor = UIColor.darkText
         examLabel.font = UIFont.systemFont(ofSize: 100, weight: .regular)
-        examLabel.text = "0"
+        examLabel.text = String(modelWrapper.predictMark(visits: 50, homework: 5, test: 5))
     }
     
     private func configureVisitSlider() {
@@ -83,6 +87,7 @@ final class ViewController: UIViewController {
         visitSlider.contentViewColor = PaletteColors.blue
         visitSlider.valueViewColor = .white
         visitSlider.observeTracking(label: visitLabel)
+        visitSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
     }
     
     private func configureHomeworkSlider() {
@@ -100,6 +105,7 @@ final class ViewController: UIViewController {
         homeworkSlider.contentViewColor = PaletteColors.green
         homeworkSlider.valueViewColor = .white
         homeworkSlider.observeTracking(label: homeworkLabel)
+        homeworkSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
     }
     
     private func configureTestSlider() {
@@ -117,6 +123,13 @@ final class ViewController: UIViewController {
         testSlider.contentViewColor = PaletteColors.teal
         testSlider.valueViewColor = .white
         testSlider.observeTracking(label: testLabel)
+        testSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
+    }
+    
+    @objc private func sliderValueChanged() {
+        examLabel.text = String(modelWrapper.predictMark(visits: Int(visitSlider.fraction * 100),
+                                                         homework: Int(homeworkSlider.fraction * 10),
+                                                         test: Int(testSlider.fraction * 10)))
     }
     
 }
