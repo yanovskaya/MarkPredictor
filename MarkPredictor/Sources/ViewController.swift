@@ -34,31 +34,38 @@ final class ViewController: UIViewController {
     // MARK: - Private Properties
     
     private let modelWrapper = MarkModelWrapper()
+    private var defaults = UserDefaults.standard
     
     private var visits: Int {
         get {
-            let visits = UserDefaults.standard.integer(forKey: UserDefaultsKeys.visits)
+            let visits = defaults.integer(forKey: UserDefaultsKeys.visits)
             return visits > 0 ? visits : 50
         } set {
-            UserDefaults.standard.set(newValue, forKey: UserDefaultsKeys.visits)
+            DispatchQueue.global(qos: .background).async {
+                self.defaults.set(newValue, forKey: UserDefaultsKeys.visits)
+            }
         }
     }
     
     private var homework: Int {
         get {
-            let homework = UserDefaults.standard.integer(forKey: UserDefaultsKeys.homework)
+            let homework = defaults.integer(forKey: UserDefaultsKeys.homework)
             return homework > 0 ? homework : 5
         } set {
-            UserDefaults.standard.set(newValue, forKey: UserDefaultsKeys.homework)
+            DispatchQueue.global(qos: .background).async {
+                self.defaults.set(newValue, forKey: UserDefaultsKeys.homework)
+            }
         }
     }
     
     private var test: Int {
         get {
-            let test = UserDefaults.standard.integer(forKey: UserDefaultsKeys.test)
+            let test = defaults.integer(forKey: UserDefaultsKeys.test)
             return test > 0 ? test : 5
         } set {
-            UserDefaults.standard.set(newValue, forKey: UserDefaultsKeys.test)
+            DispatchQueue.global(qos: .background).async {
+                self.defaults.set(newValue, forKey: UserDefaultsKeys.test)
+            }
         }
     }
     

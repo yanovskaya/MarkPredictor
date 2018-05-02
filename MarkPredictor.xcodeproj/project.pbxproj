@@ -39,7 +39,7 @@
 		C42D956D2097AABE00772D70 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C42D95792097D3B100772D70 /* MarkModelWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkModelWrapper.swift; sourceTree = "<group>"; };
 		C42D957B2097D89B00772D70 /* MarkModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MarkModel.mlmodel; sourceTree = "<group>"; };
-		C42D9590209A278D00772D70 /* MarkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C42D9590209A278D00772D70 /* MarkPredictorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkPredictorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42D9592209A278E00772D70 /* MarkModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkModelTests.swift; sourceTree = "<group>"; };
 		C42D9594209A278E00772D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C42D959E209A5E9400772D70 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
@@ -113,20 +113,20 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		C42D9591209A278E00772D70 /* MarkTests */ = {
+		C42D9591209A278E00772D70 /* MarkPredictorTests */ = {
 			isa = PBXGroup;
 			children = (
 				C42D9592209A278E00772D70 /* MarkModelTests.swift */,
 				C42D9594209A278E00772D70 /* Info.plist */,
 			);
-			path = MarkTests;
+			path = MarkPredictorTests;
 			sourceTree = "<group>";
 		};
 		C44ED7FC2093D6B900B8A642 = {
 			isa = PBXGroup;
 			children = (
 				C44ED8072093D6B900B8A642 /* MarkPredictor */,
-				C42D9591209A278E00772D70 /* MarkTests */,
+				C42D9591209A278E00772D70 /* MarkPredictorTests */,
 				C44ED8062093D6B900B8A642 /* Products */,
 				4E31211281BA4732E9EB62FF /* Pods */,
 				7EF0338451EFD16CE8855751 /* Frameworks */,
@@ -137,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				C44ED8052093D6B900B8A642 /* MarkPredictor.app */,
-				C42D9590209A278D00772D70 /* MarkTests.xctest */,
+				C42D9590209A278D00772D70 /* MarkPredictorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,9 +154,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C42D958F209A278D00772D70 /* MarkTests */ = {
+		C42D958F209A278D00772D70 /* MarkPredictorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C42D9599209A278E00772D70 /* Build configuration list for PBXNativeTarget "MarkTests" */;
+			buildConfigurationList = C42D9599209A278E00772D70 /* Build configuration list for PBXNativeTarget "MarkPredictorTests" */;
 			buildPhases = (
 				C42D958C209A278D00772D70 /* Sources */,
 				C42D958D209A278D00772D70 /* Frameworks */,
@@ -167,9 +167,9 @@
 			dependencies = (
 				C42D9596209A278E00772D70 /* PBXTargetDependency */,
 			);
-			name = MarkTests;
+			name = MarkPredictorTests;
 			productName = MarkTests;
-			productReference = C42D9590209A278D00772D70 /* MarkTests.xctest */;
+			productReference = C42D9590209A278D00772D70 /* MarkPredictorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		C44ED8042093D6B900B8A642 /* MarkPredictor */ = {
@@ -225,7 +225,7 @@
 			projectRoot = "";
 			targets = (
 				C44ED8042093D6B900B8A642 /* MarkPredictor */,
-				C42D958F209A278D00772D70 /* MarkTests */,
+				C42D958F209A278D00772D70 /* MarkPredictorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -364,13 +364,13 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JHLX4XGDFC;
-				INFOPLIST_FILE = MarkTests/Info.plist;
+				INFOPLIST_FILE = MarkPredictorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-.MarkTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.MarkPredictorTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -384,13 +384,13 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JHLX4XGDFC;
-				INFOPLIST_FILE = MarkTests/Info.plist;
+				INFOPLIST_FILE = MarkPredictorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-.MarkTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.MarkPredictorTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -555,7 +555,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C42D9599209A278E00772D70 /* Build configuration list for PBXNativeTarget "MarkTests" */ = {
+		C42D9599209A278E00772D70 /* Build configuration list for PBXNativeTarget "MarkPredictorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C42D9597209A278E00772D70 /* Debug */,
