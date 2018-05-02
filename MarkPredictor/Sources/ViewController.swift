@@ -35,6 +35,33 @@ final class ViewController: UIViewController {
     
     private let modelWrapper = MarkModelWrapper()
     
+    private var visits: Int {
+        get {
+            let visits = UserDefaults.standard.integer(forKey: UserDefaultsKeys.visits)
+            return visits > 0 ? visits : 50
+        } set {
+            UserDefaults.standard.set(newValue, forKey: UserDefaultsKeys.visits)
+        }
+    }
+    
+    private var homework: Int {
+        get {
+            let homework = UserDefaults.standard.integer(forKey: UserDefaultsKeys.homework)
+            return homework > 0 ? homework : 5
+        } set {
+            UserDefaults.standard.set(newValue, forKey: UserDefaultsKeys.homework)
+        }
+    }
+    
+    private var test: Int {
+        get {
+            let test = UserDefaults.standard.integer(forKey: UserDefaultsKeys.test)
+            return test > 0 ? test : 5
+        } set {
+            UserDefaults.standard.set(newValue, forKey: UserDefaultsKeys.test)
+        }
+    }
+    
     // MARK: - ViewController lifecycle
     
     override func viewDidLoad() {
@@ -69,7 +96,7 @@ final class ViewController: UIViewController {
         
         examLabel.textColor = UIColor.darkText
         examLabel.font = UIFont.systemFont(ofSize: 100, weight: .regular)
-        examLabel.text = String(modelWrapper.predictMark(visits: 50, homework: 5, test: 5))
+        examLabel.text = String(modelWrapper.predictMark(visits: visits, homework: homework, test: test))
     }
     
     private func configureVisitSlider() {
@@ -84,6 +111,7 @@ final class ViewController: UIViewController {
         visitSlider.setMinimumLabelAttributedText(NSAttributedString(string: "0%", attributes: labelTextAttributes))
         visitSlider.setMaximumLabelAttributedText(NSAttributedString(string: "100%", attributes: labelTextAttributes))
         visitSlider.initialConfigure()
+        visitSlider.fraction = CGFloat(visits) / 100
         visitSlider.contentViewColor = PaletteColors.blue
         visitSlider.valueViewColor = .white
         visitSlider.observeTracking(label: visitLabel)
@@ -102,6 +130,7 @@ final class ViewController: UIViewController {
         homeworkSlider.setMinimumLabelAttributedText(NSAttributedString(string: "0", attributes: labelTextAttributes))
         homeworkSlider.setMaximumLabelAttributedText(NSAttributedString(string: "10", attributes: labelTextAttributes))
         homeworkSlider.initialConfigure()
+        homeworkSlider.fraction = CGFloat(homework) / 10
         homeworkSlider.contentViewColor = PaletteColors.green
         homeworkSlider.valueViewColor = .white
         homeworkSlider.observeTracking(label: homeworkLabel)
@@ -120,6 +149,7 @@ final class ViewController: UIViewController {
         testSlider.setMinimumLabelAttributedText(NSAttributedString(string: "0", attributes: labelTextAttributes))
         testSlider.setMaximumLabelAttributedText(NSAttributedString(string: "10", attributes: labelTextAttributes))
         testSlider.initialConfigure()
+        testSlider.fraction = CGFloat(test) / 10
         testSlider.contentViewColor = PaletteColors.teal
         testSlider.valueViewColor = .white
         testSlider.observeTracking(label: testLabel)
@@ -127,9 +157,10 @@ final class ViewController: UIViewController {
     }
     
     @objc private func sliderValueChanged() {
-        examLabel.text = String(modelWrapper.predictMark(visits: Int(visitSlider.fraction * 100),
-                                                         homework: Int(homeworkSlider.fraction * 10),
-                                                         test: Int(testSlider.fraction * 10)))
+        visits = Int(visitSlider.fraction * 100 + 0.5)
+        homework = Int(homeworkSlider.fraction * 10 + 0.5)
+        test = Int(testSlider.fraction * 10 + 0.5)
+        examLabel.text = String(modelWrapper.predictMark(visits: visits, homework: homework, test: test))
     }
     
 }

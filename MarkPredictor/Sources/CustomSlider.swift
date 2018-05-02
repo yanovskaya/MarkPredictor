@@ -14,7 +14,6 @@ final class CustomSlider: Slider {
     // MARK: - Public Methods
     
     func initialConfigure() {
-        fraction = 0.5
         shadowOffset = CGSize(width: 0, height: 3)
         shadowBlur = 5
         shadowColor = UIColor(white: 0, alpha: 0.1)

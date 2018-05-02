@@ -9,7 +9,7 @@
 import CoreML
 import Foundation
 
-class MarkModelWrapper {
+final class MarkModelWrapper {
     
     private let model = MarkModel()
     
