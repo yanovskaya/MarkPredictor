@@ -3,5 +3,4 @@ use_frameworks!
 
 target 'MarkPredictor' do
   pod 'fluid-slider'
-  pod 'SwiftLint'
 end
