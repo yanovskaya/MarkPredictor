@@ -34,45 +34,28 @@ final class ViewController: UIViewController {
     // MARK: - Private Properties
     
     private let modelWrapper = MarkModelWrapper()
-    private var defaults = UserDefaults.standard
+    private let notificationCenter = NotificationCenter.default
     
-    private var visits: Int {
-        get {
-            let visits = defaults.integer(forKey: UserDefaultsKeys.visits)
-            return visits > 0 ? visits : 50
-        } set {
-            DispatchQueue.global(qos: .background).async {
-                self.defaults.set(newValue, forKey: UserDefaultsKeys.visits)
-            }
-        }
-    }
+    private var visits: Int = {
+        let visits = UserDefaults.standard.integer(forKey: UserDefaultsKeys.visits)
+        return visits > 0 ? visits : 50
+    }()
     
-    private var homework: Int {
-        get {
-            let homework = defaults.integer(forKey: UserDefaultsKeys.homework)
-            return homework > 0 ? homework : 5
-        } set {
-            DispatchQueue.global(qos: .background).async {
-                self.defaults.set(newValue, forKey: UserDefaultsKeys.homework)
-            }
-        }
-    }
+    private var homework: Int = {
+        let homework = UserDefaults.standard.integer(forKey: UserDefaultsKeys.homework)
+        return homework > 0 ? homework : 5
+    }()
     
-    private var test: Int {
-        get {
-            let test = defaults.integer(forKey: UserDefaultsKeys.test)
-            return test > 0 ? test : 5
-        } set {
-            DispatchQueue.global(qos: .background).async {
-                self.defaults.set(newValue, forKey: UserDefaultsKeys.test)
-            }
-        }
-    }
+    private var test: Int = {
+        let test = UserDefaults.standard.integer(forKey: UserDefaultsKeys.test)
+        return test > 0 ? test : 5
+    }()
     
     // MARK: - ViewController lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNotification()
         configureNavigationBar()
         configureLabels()
         configureVisitSlider()
@@ -81,6 +64,10 @@ final class ViewController: UIViewController {
     }
     
     // MARK: - Private Methods
+    
+    private func configureNotification() {
+        notificationCenter.addObserver(self, selector: #selector(appWillTerminate), name: Notification.Name.UIApplicationWillTerminate, object: nil)
+    }
     
     private func configureNavigationBar() {
         title = Constants.title
@@ -168,6 +155,12 @@ final class ViewController: UIViewController {
         homework = Int(homeworkSlider.fraction * 10 + 0.5)
         test = Int(testSlider.fraction * 10 + 0.5)
         examLabel.text = String(modelWrapper.predictMark(visits: visits, homework: homework, test: test))
+    }
+    
+    @objc private func appWillTerminate() {
+        UserDefaults.standard.set(visits, forKey: UserDefaultsKeys.visits)
+        UserDefaults.standard.set(homework, forKey: UserDefaultsKeys.homework)
+        UserDefaults.standard.set(test, forKey: UserDefaultsKeys.test)
     }
     
 }

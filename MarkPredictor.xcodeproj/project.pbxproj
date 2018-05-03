@@ -363,7 +363,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JHLX4XGDFC;
+				DEVELOPMENT_TEAM = 383575UEP3;
 				INFOPLIST_FILE = MarkPredictorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -383,7 +383,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JHLX4XGDFC;
+				DEVELOPMENT_TEAM = 383575UEP3;
 				INFOPLIST_FILE = MarkPredictorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
