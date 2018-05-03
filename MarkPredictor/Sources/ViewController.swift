@@ -66,7 +66,7 @@ final class ViewController: UIViewController {
     // MARK: - Private Methods
     
     private func configureNotification() {
-        notificationCenter.addObserver(self, selector: #selector(appWillTerminate), name: Notification.Name.UIApplicationWillTerminate, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(appDidEnterBackground), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
     }
     
     private func configureNavigationBar() {
@@ -157,7 +157,7 @@ final class ViewController: UIViewController {
         examLabel.text = String(modelWrapper.predictMark(visits: visits, homework: homework, test: test))
     }
     
-    @objc private func appWillTerminate() {
+    @objc private func appDidEnterBackground() {
         UserDefaults.standard.set(visits, forKey: UserDefaultsKeys.visits)
         UserDefaults.standard.set(homework, forKey: UserDefaultsKeys.homework)
         UserDefaults.standard.set(test, forKey: UserDefaultsKeys.test)
