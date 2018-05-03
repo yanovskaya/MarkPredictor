@@ -4,8 +4,8 @@ cache: cocoapods
 podfile: MarkPredictor/Podfile
 before_install:
  - gem install cocoapods 
- - pod install --project-directory=MarkPredictor
+ - pod install 
 script:
-  - xcodebuild -scheme MarkPredictor -workspace MarkPredictor.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8S,OS=11.3' build test
+  - xcodebuild -scheme MarkPredictor -workspace MarkPredictor.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=10.0' build test
 after_success:
   - bash <(curl -s https://codecov.io/bash)
