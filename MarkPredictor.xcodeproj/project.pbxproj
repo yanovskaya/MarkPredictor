@@ -13,6 +13,7 @@
 		C42D957C2097D89B00772D70 /* MarkModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C42D957B2097D89B00772D70 /* MarkModel.mlmodel */; };
 		C42D9593209A278E00772D70 /* MarkModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9592209A278E00772D70 /* MarkModelTests.swift */; };
 		C42D959F209A5E9400772D70 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D959E209A5E9400772D70 /* UserDefaultKeys.swift */; };
+		C4441E92209E412400573861 /* MarkPredictorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4441E91209E412400573861 /* MarkPredictorUITests.swift */; };
 		C44ED8092093D6B900B8A642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44ED8082093D6B900B8A642 /* AppDelegate.swift */; };
 		C44ED80B2093D6B900B8A642 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44ED80A2093D6B900B8A642 /* ViewController.swift */; };
 		C44ED80E2093D6B900B8A642 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C44ED80C2093D6B900B8A642 /* Main.storyboard */; };
@@ -23,6 +24,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		C42D9595209A278E00772D70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C44ED7FD2093D6B900B8A642 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C44ED8042093D6B900B8A642;
+			remoteInfo = MarkPredictor;
+		};
+		C4441E94209E412400573861 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C44ED7FD2093D6B900B8A642 /* Project object */;
 			proxyType = 1;
@@ -43,6 +51,9 @@
 		C42D9592209A278E00772D70 /* MarkModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkModelTests.swift; sourceTree = "<group>"; };
 		C42D9594209A278E00772D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C42D959E209A5E9400772D70 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
+		C4441E8F209E412400573861 /* MarkPredictorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkPredictorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4441E91209E412400573861 /* MarkPredictorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkPredictorUITests.swift; sourceTree = "<group>"; };
+		C4441E93209E412400573861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C44ED8052093D6B900B8A642 /* MarkPredictor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkPredictor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44ED8082093D6B900B8A642 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C44ED80A2093D6B900B8A642 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +65,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		C42D958D209A278D00772D70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4441E8C209E412400573861 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,11 +140,21 @@
 			path = MarkPredictorTests;
 			sourceTree = "<group>";
 		};
+		C4441E90209E412400573861 /* MarkPredictorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C4441E91209E412400573861 /* MarkPredictorUITests.swift */,
+				C4441E93209E412400573861 /* Info.plist */,
+			);
+			path = MarkPredictorUITests;
+			sourceTree = "<group>";
+		};
 		C44ED7FC2093D6B900B8A642 = {
 			isa = PBXGroup;
 			children = (
 				C44ED8072093D6B900B8A642 /* MarkPredictor */,
 				C42D9591209A278E00772D70 /* MarkPredictorTests */,
+				C4441E90209E412400573861 /* MarkPredictorUITests */,
 				C44ED8062093D6B900B8A642 /* Products */,
 				4E31211281BA4732E9EB62FF /* Pods */,
 				7EF0338451EFD16CE8855751 /* Frameworks */,
@@ -138,6 +166,7 @@
 			children = (
 				C44ED8052093D6B900B8A642 /* MarkPredictor.app */,
 				C42D9590209A278D00772D70 /* MarkPredictorTests.xctest */,
+				C4441E8F209E412400573861 /* MarkPredictorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,6 +200,24 @@
 			productName = MarkTests;
 			productReference = C42D9590209A278D00772D70 /* MarkPredictorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C4441E8E209E412400573861 /* MarkPredictorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4441E96209E412400573861 /* Build configuration list for PBXNativeTarget "MarkPredictorUITests" */;
+			buildPhases = (
+				C4441E8B209E412400573861 /* Sources */,
+				C4441E8C209E412400573861 /* Frameworks */,
+				C4441E8D209E412400573861 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4441E95209E412400573861 /* PBXTargetDependency */,
+			);
+			name = MarkPredictorUITests;
+			productName = MarkPredictorUITests;
+			productReference = C4441E8F209E412400573861 /* MarkPredictorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		C44ED8042093D6B900B8A642 /* MarkPredictor */ = {
 			isa = PBXNativeTarget;
@@ -206,6 +253,10 @@
 						CreatedOnToolsVersion = 9.3;
 						TestTargetID = C44ED8042093D6B900B8A642;
 					};
+					C4441E8E209E412400573861 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = C44ED8042093D6B900B8A642;
+					};
 					C44ED8042093D6B900B8A642 = {
 						CreatedOnToolsVersion = 9.3;
 					};
@@ -226,12 +277,20 @@
 			targets = (
 				C44ED8042093D6B900B8A642 /* MarkPredictor */,
 				C42D958F209A278D00772D70 /* MarkPredictorTests */,
+				C4441E8E209E412400573861 /* MarkPredictorUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C42D958E209A278D00772D70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4441E8D209E412400573861 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -314,6 +373,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C4441E8B209E412400573861 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4441E92209E412400573861 /* MarkPredictorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C44ED8012093D6B900B8A642 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -335,6 +402,11 @@
 			isa = PBXTargetDependency;
 			target = C44ED8042093D6B900B8A642 /* MarkPredictor */;
 			targetProxy = C42D9595209A278E00772D70 /* PBXContainerItemProxy */;
+		};
+		C4441E95209E412400573861 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C44ED8042093D6B900B8A642 /* MarkPredictor */;
+			targetProxy = C4441E94209E412400573861 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -395,6 +467,44 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarkPredictor.app/MarkPredictor";
+			};
+			name = Release;
+		};
+		C4441E97209E412400573861 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 383575UEP3;
+				INFOPLIST_FILE = MarkPredictorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-.MarkPredictorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MarkPredictor;
+			};
+			name = Debug;
+		};
+		C4441E98209E412400573861 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 383575UEP3;
+				INFOPLIST_FILE = MarkPredictorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-.MarkPredictorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MarkPredictor;
 			};
 			name = Release;
 		};
@@ -560,6 +670,15 @@
 			buildConfigurations = (
 				C42D9597209A278E00772D70 /* Debug */,
 				C42D9598209A278E00772D70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4441E96209E412400573861 /* Build configuration list for PBXNativeTarget "MarkPredictorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4441E97209E412400573861 /* Debug */,
+				C4441E98209E412400573861 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
