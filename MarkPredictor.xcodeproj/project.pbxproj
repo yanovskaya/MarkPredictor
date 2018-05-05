@@ -10,10 +10,10 @@
 		C42D95692097A29600772D70 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D95682097A29600772D70 /* CustomSlider.swift */; };
 		C42D956E2097AABE00772D70 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D956D2097AABE00772D70 /* Colors.swift */; };
 		C42D957A2097D3B100772D70 /* MarkModelWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D95792097D3B100772D70 /* MarkModelWrapper.swift */; };
-		C42D957C2097D89B00772D70 /* MarkModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C42D957B2097D89B00772D70 /* MarkModel.mlmodel */; };
 		C42D9593209A278E00772D70 /* MarkModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D9592209A278E00772D70 /* MarkModelTests.swift */; };
 		C42D959F209A5E9400772D70 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D959E209A5E9400772D70 /* UserDefaultKeys.swift */; };
 		C4441E92209E412400573861 /* MarkPredictorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4441E91209E412400573861 /* MarkPredictorUITests.swift */; };
+		C4441E9E209E542D00573861 /* MarkModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C4441E9D209E542D00573861 /* MarkModel.mlmodel */; };
 		C44ED8092093D6B900B8A642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44ED8082093D6B900B8A642 /* AppDelegate.swift */; };
 		C44ED80B2093D6B900B8A642 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44ED80A2093D6B900B8A642 /* ViewController.swift */; };
 		C44ED80E2093D6B900B8A642 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C44ED80C2093D6B900B8A642 /* Main.storyboard */; };
@@ -46,7 +46,6 @@
 		C42D95682097A29600772D70 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		C42D956D2097AABE00772D70 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C42D95792097D3B100772D70 /* MarkModelWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkModelWrapper.swift; sourceTree = "<group>"; };
-		C42D957B2097D89B00772D70 /* MarkModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MarkModel.mlmodel; sourceTree = "<group>"; };
 		C42D9590209A278D00772D70 /* MarkPredictorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkPredictorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42D9592209A278E00772D70 /* MarkModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkModelTests.swift; sourceTree = "<group>"; };
 		C42D9594209A278E00772D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		C4441E8F209E412400573861 /* MarkPredictorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkPredictorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4441E91209E412400573861 /* MarkPredictorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkPredictorUITests.swift; sourceTree = "<group>"; };
 		C4441E93209E412400573861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4441E9D209E542D00573861 /* MarkModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MarkModel.mlmodel; sourceTree = "<group>"; };
 		C44ED8052093D6B900B8A642 /* MarkPredictor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkPredictor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44ED8082093D6B900B8A642 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C44ED80A2093D6B900B8A642 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 			children = (
 				C44ED80C2093D6B900B8A642 /* Main.storyboard */,
 				C44ED8112093D6BD00B8A642 /* LaunchScreen.storyboard */,
-				C42D957B2097D89B00772D70 /* MarkModel.mlmodel */,
+				C4441E9D209E542D00573861 /* MarkModel.mlmodel */,
 				C44ED80F2093D6BD00B8A642 /* Assets.xcassets */,
 				C44ED8142093D6BD00B8A642 /* Info.plist */,
 				C42D956D2097AABE00772D70 /* Colors.swift */,
@@ -386,11 +386,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C44ED80B2093D6B900B8A642 /* ViewController.swift in Sources */,
-				C42D957C2097D89B00772D70 /* MarkModel.mlmodel in Sources */,
 				C42D95692097A29600772D70 /* CustomSlider.swift in Sources */,
 				C42D957A2097D3B100772D70 /* MarkModelWrapper.swift in Sources */,
 				C44ED8092093D6B900B8A642 /* AppDelegate.swift in Sources */,
 				C42D959F209A5E9400772D70 /* UserDefaultKeys.swift in Sources */,
+				C4441E9E209E542D00573861 /* MarkModel.mlmodel in Sources */,
 				C42D956E2097AABE00772D70 /* Colors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
