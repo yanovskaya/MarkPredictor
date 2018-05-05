@@ -24,8 +24,11 @@ class MarkPredictorUITests: XCTestCase {
     }
     
     func testInitialStateIsCorrect() {
-        let labels = XCUIApplication().staticTexts
-        XCTAssertEqual(labels.count, 14)
+        let visitLabel = app.staticTexts["Процент посещенных занятий"]
+        let testLabel = app.staticTexts["Оценка за контрольную работу"]
+        let hwLabel = app.staticTexts["Оценка за домашнюю работу"]
+        
+        XCTAssertTrue(visitLabel.exists && testLabel.exists && hwLabel.exists)
     }
     
 }
