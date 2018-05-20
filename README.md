@@ -10,5 +10,5 @@
 `pod install`. 
 <br />
 
-## Архитектура нейронной сети
+## 🏗 Архитектура нейронной сети
 <img src="https://github.com/yanovskaya/MarkPredictor/blob/master/nn.png">
