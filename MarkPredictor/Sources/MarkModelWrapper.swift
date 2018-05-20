@@ -19,7 +19,10 @@ final class MarkModelWrapper {
             mlMultiArrayInput![0] = NSNumber(value: Double(visits))
             mlMultiArrayInput![1] = NSNumber(value: Double(homework))
             mlMultiArrayInput![2] = NSNumber(value: Double(test))
-            let markModelOutput = try model.prediction(input: MarkModelInput(matrixVisitsHomeworkTest: mlMultiArrayInput!))
+            
+            let input = MarkModelInput(matrixVisitsHomeworkTest: mlMultiArrayInput!)
+            let markModelOutput = try model.prediction(input: input)
+            
             return Int(markModelOutput.examMark[0].doubleValue + 0.5)
         } catch {
             return 0

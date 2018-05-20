@@ -107,7 +107,6 @@ final class ViewController: UIViewController {
         visitSlider.initialConfigure()
         visitSlider.fraction = CGFloat(visits) / 100
         visitSlider.contentViewColor = PaletteColors.blue
-        visitSlider.valueViewColor = .white
         visitSlider.observeTracking(label: visitLabel)
         visitSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
     }
@@ -126,7 +125,6 @@ final class ViewController: UIViewController {
         homeworkSlider.initialConfigure()
         homeworkSlider.fraction = CGFloat(homework) / 10
         homeworkSlider.contentViewColor = PaletteColors.green
-        homeworkSlider.valueViewColor = .white
         homeworkSlider.observeTracking(label: homeworkLabel)
         homeworkSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
     }
@@ -145,7 +143,6 @@ final class ViewController: UIViewController {
         testSlider.initialConfigure()
         testSlider.fraction = CGFloat(test) / 10
         testSlider.contentViewColor = PaletteColors.teal
-        testSlider.valueViewColor = .white
         testSlider.observeTracking(label: testLabel)
         testSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
     }
