@@ -12,3 +12,8 @@
 
 ## 🏗 Архитектура нейронной сети
 <img src="https://github.com/yanovskaya/MarkPredictor/blob/master/nn.png">
+
+## 📖 Использованные источники
+* [How to Train a Core ML Model for an iOS App](https://code.tutsplus.com/tutorials/how-to-train-a-core-ml-model-for-an-ios-app--cms-30147)
+
+* [CoreML, Keras and TensorFlow — a super simple end to end test](https://medium.com/@JMangia/super-simple-end-to-end-test-of-keras-tensorflow-and-coreml-f247ab73fb42)
